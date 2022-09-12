@@ -22,6 +22,14 @@
                 "showReuseMessage": false,
                 "clear": false
             }
-        }
+        },
+        {
+            "label": "watch",
+            "type": "shell",
+            "command": "yarn watch",
+            "problemMatcher": [
+                "$tsc"
+            ]
+        },
     ]
 }

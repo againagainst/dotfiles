@@ -7,15 +7,15 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Compile and Run",
+            "name": "Launch Active File",
             "skipFiles": [
                 "<node_internals>/**"
             ],
             "program": "dist/${fileBasenameNoExtension}.js",
             "outFiles": [
-                "${workspaceFolder}/**/*.js"
+                "${workspaceFolder}/dist/*.js"
             ],
-            "preLaunchTask": "compile"
+            
         }
     ]
 }

@@ -4,8 +4,10 @@
   "main": "dist/index.js",
   "license": "MIT",
   "dependencies": {},
+  "type": "module",
   "scripts": {
-    "start": "yarn ts-node src/hello.ts"
+    "start": "yarn ts-node src/hello.ts",
+    "watch": "yarn tsc --watch"
   },
   "devDependencies": {
     "@types/node": "^18.7.16",
