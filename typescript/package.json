@@ -6,14 +6,16 @@
   "dependencies": {},
   "type": "module",
   "scripts": {
-    "start": "yarn ts-node src/hello.ts",
-    "watch": "yarn tsc --watch"
+    "watch": "yarn tsc --watch",
+    "dev": "nodemon -w dist"
   },
   "devDependencies": {
     "@types/node": "^18.7.16",
     "@typescript-eslint/eslint-plugin": "^5.36.2",
     "@typescript-eslint/parser": "^5.36.2",
     "eslint": "^8.23.0",
+    "nodemon": "^2.0.19",
+    "prettier": "^2.7.1",
     "ts-node": "^10.9.1",
     "typescript": "^4.8.3",
     "typescript-eslint": "^0.0.1-alpha.0"

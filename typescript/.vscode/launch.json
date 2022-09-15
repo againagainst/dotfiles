@@ -5,17 +5,33 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Debug Active File",
             "type": "node",
             "request": "launch",
-            "name": "Launch Active File",
-            "skipFiles": [
-                "<node_internals>/**"
-            ],
             "program": "dist/${fileBasenameNoExtension}.js",
             "outFiles": [
                 "${workspaceFolder}/dist/*.js"
             ],
-            
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+        },
+        {
+            "name": "Nodemon index.ts",
+            "type": "node",
+            "request": "launch",
+            "program": "dist/index.js",
+            "console": "integratedTerminal",
+            "runtimeExecutable": "nodemon",
+            "internalConsoleOptions": "neverOpen",
+            "restart": true,
+            "args": [
+                "-w",
+                "dist"
+            ],
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
         }
     ]
 }
