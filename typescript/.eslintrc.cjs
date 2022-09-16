@@ -1,11 +1,10 @@
 module.exports = {
+  root: true,
   env: {
     node: true,
   },
-  extends: ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
-  parser: "@typescript-eslint/parser",
+  extends: ["eslint:recommended"],
   plugins: ["@typescript-eslint"],
-  root: true,
   rules: {
     "no-multi-spaces": "warn",
     "no-multiple-empty-lines": "warn",
@@ -15,4 +14,17 @@ module.exports = {
     "prefer-const": "warn",
     "space-in-parens": "warn",
   },
+  parser: "@typescript-eslint/parser",
+  overrides: [
+    {
+      files: ["*.ts", "*.tsx"],
+      extends: [
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
+      ],
+      parserOptions: {
+        project: ["./tsconfig.json"],
+      },
+    },
+  ],
 };
